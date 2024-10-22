@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>天猫首页实战</title>
+	<meta name='viewport' content='width=device-width initial-scale=1 minimum-scale=1 maximum-scale=1 user-scalable=no'>	
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">	
+	</head>
+	<body> 
+        <div id="wrap">
+            <header>
+				<div class="header-top">
+					<div><a href=""></a></div>
+					<div></div>
+					<div><a href="">登录</a></div>
+				</div>
+				<div class="header-bot">
+					<a href="">搜索商品，品牌</a>
+				</div>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href=""><img src="images/4.png" alt="">苏宁易购</a></li>
+                    <li><a href=""><img src="images/5.png" alt="">天猫超市</a></li>
+                    <li><a href=""><img src="images/6.png" alt="">天猫国际</a></li>
+                    <li><a href=""><img src="images/7.png" alt="">聚划算</a></li>
+                    <li><a href=""><img src="images/8.png" alt="">分类 </a></li>
+                </ul>
+            </nav>
+            <div class="banner">
+                    <ul class='clearfix'>
+                        <li class='fl'><a href=""><img src="images/7.jpg" alt=""></a></li>
+                        <li class='fl'><a href=""><img src="images/8.jpg" alt=""></a></li>
+                        <li class='fl'><a href=""><img src="images/9.jpg" alt=""></a></li>
+                        <li class='fl'><a href=""><img src="images/10.jpg" alt=""></a></li>
+                        <li class='fl'><a href=""><img src="images/11.jpg" alt=""></a></li>
+                        <li class='fl'><a href=""><img src="images/12.jpg" alt=""></a></li>
+                        <li class='fl'><a href=""><img src="images/9.png" alt=""></a></li>
+                        <li class='fl'><a href=""><img src="images/10.png" alt=""></a></li>
+                        <li class='fl'><a href=""><img src="images/11.png" alt=""></a></li>
+                        <li class='fl'><a href=""><img src="images/12.png" alt=""></a></li>
+                        <li class='fl'><a href=""><img src="images/7.jpg" alt=""></a></li>
+                    </ul>
+                    <ul class="clearfix">
+                        <li class="fl"></li>
+                        <li class="fl"></li>
+                        <li class="fl"></li>
+                        <li class="fl"></li>
+                        <li class="fl"></li>
+                        <li class="fl"></li>
+                        <li class="fl"></li>
+                        <li class="fl"></li>
+                        <li class="fl"></li>
+                        <li class="fl"></li>
+                    </ul>
+                </div>
+        </div>
+        <script>
+            //定义变量名html来保存html根元素对象
+            var html = document.querySelector('html'); 
+            //调用changeRem函数来动态计算html根元素的字体大小
+            changeRem();
+            //当监测到resize事件（改变浏览器大小）时，再次调用changeRem函数		
+            window.addEventListener('resize',changeRem);
+            
+            //以下是changeRem函数定义代码
+            function changeRem() {		
+                //获取设备宽度
+                var width = html.getBoundingClientRect().width;	
+                //实现根据设备宽度动态计算html根元素的字号		
+                html.style.fontSize = width/10+ 'px';
+            } 
+        </script>                     
+	</body>
+</html>
